@@ -36,7 +36,7 @@ plt.suptitle(
     "Upset plot: intersecciones de géneros cinematográficos (87 585 películas)\nRéalizado por Mehdi El Mansouri", 
     fontsize=16, fontweight='bold'
 )
-plt.ylabel("Número de películas", fontsize=12)
+axes['intersections'].set_ylabel("Número de películas", fontsize=12)
 
 
 # Mostramos el gráfico:
