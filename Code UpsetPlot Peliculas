@@ -1,0 +1,33 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from upsetplot import UpSet
+
+# Leemos el CSV con la informacion de las peliculas
+df = pd.read_csv(r"C:\Users\mehdi\OneDrive\Bureau\movies.csv")
+
+# Definimos los géneros que queremos analizar
+genres = ["Drama", "Comedy", "Thriller", "Action", "Romance", "Adventure", "Crime"]
+
+# Convertimos la columna 'genres' en columnas binarias
+df = df.join(df['genres'].str.get_dummies('|'))
+
+# Filtramos solo las peliculas que tengan al menos uno de los géneros de interés
+df = df[df[genres].any(axis=1)]
+
+# Convertimos las columnas de géneros en valores booleanos
+data = df[genres].astype(bool)
+
+# Creamos el grafico UpSet
+upset = UpSet(
+    data,
+    subset_size='count',   # Contamos el numero de películas
+    show_counts=True,      # Mostramos el numero encima de las barras
+    sort_by='cardinality'  # Ordenamos por frecuencia
+)
+
+# Dibujamos la figura
+fig = plt.figure(figsize=(12,8))
+upset.plot(fig=fig)
+
+# Mostramos el grafico
+plt.show()
