@@ -20,13 +20,27 @@ data = df[genres].astype(bool)
 # Creamos el grafico UpSet
 upset = UpSet(
     data,
-    subset_size='count',   # Contamos el numero de películas
-    show_counts=True,      # Mostramos el numero encima de las barras
-    sort_by='cardinality'  # Ordenamos por frecuencia
+    subset_size='count',
+    show_counts=True,
+    sort_by='cardinality',
+    facecolor="gray",   # color gris de las barras
+    element_size=40     # tamaño de las barras
 )
 
 # Dibujamos la figura
 fig = plt.figure(figsize=(12,8))
+upset.plot(fig=fig)
+
+# Añadimos titulo, eje y fuente
+plt.suptitle(
+    "Upset plot: intersecciones de géneros cinematográficos (87 585 películas)\nRéalizado por Mehdi El Mansouri", 
+    fontsize=16, fontweight='bold'
+)
+plt.ylabel("Número de películas", fontsize=12)
+plt.figtext(0.9, 0.01, "Fuente: GroupLens", horizontalalignment='right', fontsize=10, style='italic')
+
+# Mostramos el gráfico
+plt.show()
 upset.plot(fig=fig)
 
 # Mostramos el grafico
