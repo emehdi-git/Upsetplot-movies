@@ -42,3 +42,5 @@ axes_dict['intersections'].set_ylabel("Número de películas", fontsize=12)
 # Mostramos el gráfico:
 plt.show()
 
+# Si encuentra un problema con la ejecucion, probablemente se debe a 
+# conflicto entre versiones de pandas, matplotlib y upsetplot.
