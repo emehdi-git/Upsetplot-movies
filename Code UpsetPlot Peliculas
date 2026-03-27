@@ -37,7 +37,7 @@ plt.suptitle(
     fontsize=16, fontweight='bold'
 )
 plt.ylabel("Número de películas", fontsize=12)
-plt.figtext(0.9, 0.01, "Fuente: GroupLens", horizontalalignment='right', fontsize=10, style='italic')
+plt.figtext(0.9, 0.01, "Fuente: GroupLens", horizontalalignment='right', fontsize=10)
 
 # Mostramos el gráfico
 plt.show()
