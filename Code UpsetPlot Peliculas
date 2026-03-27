@@ -23,8 +23,8 @@ upset = UpSet(
     subset_size='count',
     show_counts=True,
     sort_by='cardinality',
-    facecolor="gray",   # color gris de las barras
-    element_size=40     # tamaño de las barras
+    facecolor="gray",  
+    element_size=40     
 )
 
 # Dibujamos la figura
