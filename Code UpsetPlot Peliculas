@@ -41,7 +41,4 @@ plt.ylabel("Número de películas", fontsize=12)
 
 # Mostramos el gráfico
 plt.show()
-upset.plot(fig=fig)
 
-# Mostramos el grafico
-plt.show()
