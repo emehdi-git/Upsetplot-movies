@@ -1,6 +1,6 @@
 # UpSet Plot de géneros cinematograficos
 
-Este proyecto presenta una visualización tipo **UpSet Plot** para analizar las combinaciones de géneros cinematograficos en un conjunto de **87 585 películas**.
+Este proyecto presenta una visualizacion tipo **UpSet Plot** para analizar las combinaciones de géneros cinematograficos en un conjunto de **87 585 películas**.
 
 ## Géneros analizados
 
