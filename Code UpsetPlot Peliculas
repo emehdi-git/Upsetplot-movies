@@ -29,14 +29,14 @@ upset = UpSet(
 
 # Dibujamos la figura:
 fig = plt.figure(figsize=(12,8))
-upset.plot(fig=fig)
+axes_dict = upset.plot(fig=fig)
 
 # Añadimos titulo y eje:
 plt.suptitle(
     "Upset plot: intersecciones de géneros cinematográficos (87 585 películas)\nRéalizado por Mehdi El Mansouri", 
     fontsize=16, fontweight='bold'
 )
-axes['intersections'].set_ylabel("Número de películas", fontsize=12)
+axes_dict['intersections'].set_ylabel("Número de películas", fontsize=12)
 
 
 # Mostramos el gráfico:
